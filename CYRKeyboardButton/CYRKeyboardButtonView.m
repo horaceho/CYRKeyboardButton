@@ -52,11 +52,11 @@
 - (instancetype)initWithKeyboardButton:(CYRKeyboardButton *)button type:(CYRKeyboardButtonViewType)type;
 {
     CGRect frame = [UIScreen mainScreen].bounds;
-    
+ /*
     if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
         frame = CGRectMake(0, 0, CGRectGetHeight(frame), CGRectGetWidth(frame));
     }
-    
+ */
     self = [super initWithFrame:frame];
     
     if (self) {
