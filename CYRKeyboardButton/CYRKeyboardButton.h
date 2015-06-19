@@ -124,6 +124,11 @@ extern NSString *const CYRKeyboardButtonKeyPressedKey;
 // Configuration
 
 /**
+ The string identity for the keyboard button. This is the string that is good for Key path in Interface Builder
+ */
+@property (nonatomic, strong) NSString *ident;
+
+/**
  The string input for the keyboard button. This is the string that would be inserted upon a successful key press.
  */
 @property (nonatomic, strong) NSString *input;

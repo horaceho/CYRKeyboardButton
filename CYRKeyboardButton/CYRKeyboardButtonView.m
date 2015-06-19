@@ -188,11 +188,15 @@
         
         NSMutableParagraphStyle *p = [NSMutableParagraphStyle new];
         p.alignment = NSTextAlignmentCenter;
+
+        NSString *fontName = self.button.inputOptionsFont.fontName;
+        CGFloat fontSize = self.button.inputOptionsFont.pointSize + 16.0;
+        UIFont *font = [UIFont fontWithName:fontName size:fontSize];
         
         NSAttributedString *attributedString = [[NSAttributedString alloc]
                                                 initWithString:inputString
                                                 attributes:
-                                                @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:44], NSForegroundColorAttributeName : stringColor, NSParagraphStyleAttributeName : p}];
+                                                @{NSFontAttributeName : font, NSForegroundColorAttributeName : stringColor, NSParagraphStyleAttributeName : p}];
         [attributedString drawInRect:stringRect];
     }
 }

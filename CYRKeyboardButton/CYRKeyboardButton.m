@@ -325,8 +325,9 @@ NSString *const CYRKeyboardButtonKeyPressedKey = @"CYRKeyboardButtonKeyPressedKe
     if (shouldInsertText == YES) {
         [self.textInput insertText:text];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:CYRKeyboardButtonPressedNotification object:self
-                                                          userInfo:@{CYRKeyboardButtonKeyPressedKey : text}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:CYRKeyboardButtonPressedNotification
+                                                            object:self
+                                                          userInfo:@{CYRKeyboardButtonKeyPressedKey: text}];
     }
 }
 
